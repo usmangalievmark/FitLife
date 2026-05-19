@@ -1,7 +1,7 @@
 # Проект FitLife - MVP версия 1.0
 
-# Норма потребления воды в день на килограмм тела в мл
-WATER_PER_KG_LITTERS = 30 / 1000
+# Норма потребления воды в день на килограмм тела в литрах
+WATER_PER_KG= 0.03
 
 print(
     "Привет, я бот-помощник FitLife, я умею",
@@ -26,12 +26,12 @@ user_height = float(
         "в метрах (например 1.80) "
     ).replace(",", ".")
 )
-# ИМТ = ВЕС / РОСТ ** 2
+# Индекс массы тела равен ВЕС / РОСТ ** 2
 bmi = round(
     user_weight / (user_height ** 2), 1
 )
 water_l = round(  # Расчёт нормы потребления воды для пользователя, в литрах
-    user_weight * WATER_PER_KG_LITTERS, 2
+    user_weight * WATER_PER_KG, 2
 )
 print(
     f"\nОтчет для пользователя {user_name} ({user_age}) г.\n",
